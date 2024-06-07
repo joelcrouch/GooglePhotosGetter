@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Photos Management Options</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Google Photos Management Options</h1>
+        <form action="/set_options" method="post">
+            <h2>Default Number of Photos to Keep per Week (0 means no deletions):</h2>
+            <label for="default_photos_per_week">Default:</label>
+            <input type="number" id="default_photos_per_week" name="default_photos_per_week" min="0" value="0"><br>
+            <h2>Time Range 1:</h2>
+            <label for="start_date_1">Start Date:</label>
+            <input type="date" id="start_date_1" name="start_date_1"><br>
+            <label for="end_date_1">End Date:</label>
+            <input type="date" id="end_date_1" name="end_date_1"><br>
+            <label for="photos_per_week_1">Number of Photos to Keep per Week:</label>
+            <input type="number" id="photos_per_week_1" name="photos_per_week_1" min="1" value="10"><br>
+            <h2>Time Range 2:</h2>
+            <label for="start_date_2">Start Date:</label>
+            <input type="date" id="start_date_2" name="start_date_2"><br>
+            <label for="end_date_2">End Date:</label>
+            <input type="date" id="end_date_2" name="end_date_2"><br>
+            <label for="photos_per_week_2">Number of Photos to Keep per Week:</label>
+            <input type="number" id="photos_per_week_2" name="photos_per_week_2" min="1" value="13"><br>
+            <input class="button" type="submit" value="Set Options">
+        </form>
+    </div>
+</body>
+</html>
